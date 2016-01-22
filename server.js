@@ -12,7 +12,13 @@ app.get('/about', middleware.requireAuthentication, function(req, res) {
 });
 
 function testPage(req, res) {
-    res.send('Named Function!');
+  if(req.url === '/test') {
+    res.send('Testpage');
+  } else if(req.url === '/name') {
+    res.send('Namepage');
+  } else if(req.url === '/anna') {
+    res.send('Annapage');
+  }
 }
 
 app.get('/test/', testPage);
