@@ -8,11 +8,7 @@ app.use(middleware.logger);
 
 // route-level middleware, 2nd argument in route
 app.get('/about', middleware.requireAuthentication, function(req, res) {
-    res.send('About Us!');
-});
-
-app.get('/about', function(req, res) {
-    res.send('About Us!');
+    res.send('About Us!!');
 });
 
 function testPage(req, res) {
@@ -20,6 +16,8 @@ function testPage(req, res) {
 }
 
 app.get('/test/', testPage);
+
+app.get('/name/', testPage);
 
 app.use(express.static(__dirname + '/public'));
 
