@@ -24,7 +24,7 @@ app.get('/about', middleware.requireAuthentication, function(req, res) {
 });
 
 function testPage(req, res) {
-    res.send('Test!');
+    res.send('Named Function!');
 }
 
 app.get('/test/', testPage);
