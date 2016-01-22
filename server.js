@@ -19,6 +19,8 @@ app.get('/test/', testPage);
 
 app.get('/name/', testPage);
 
+app.get('/anna/', testPage);
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, function() {
