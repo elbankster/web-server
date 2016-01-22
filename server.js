@@ -11,10 +11,6 @@ app.get('/about', middleware.requireAuthentication, function(req, res) {
     res.send('About Us!');
 });
 
-app.get('/about', function(req, res) {
-    res.send('About Us!');
-});
-
 function testPage(req, res) {
     res.send('Named Function!');
 }
