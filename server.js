@@ -20,7 +20,7 @@ app.use(middleware.logger);
 
 // route-level middleware, 2nd argument in route
 app.get('/about', middleware.requireAuthentication, function(req, res) {
-    res.send('About Us');
+    res.send('About Us!');
 });
 
 function testPage(req, res) {
